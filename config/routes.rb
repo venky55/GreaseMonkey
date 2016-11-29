@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  devise_for :users
+  resources :listings
+  
+  root to: "listings#index"
+  #devise_for :installs
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
