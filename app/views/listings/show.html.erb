@@ -1,14 +1,16 @@
 <div class="page-header">
-  <h1><%= @listing.title %></a><br> 
-  <small><%= @listing.area %>,<%= @listing.city%></small><br> 
-  <small><%= @listing.workinghours %></small><br> 
-  <small><%= @listing.workingdays %></small><br> 
-  <small><%= @listing.phonenumber %></small><br> 
-  <small><%= @listing.address %></small><br> 
-  <small><%= @listing.url %></small><br> 
+  <h1><%= @listing.title %></a><br>
+  <small><%= @listing.area %>,<%= @listing.city%></small><br>
+  <small><%= @listing.workinghours %></small><br>
+  <small><%= @listing.workingdays %></small><br>
+  <small><%= @listing.phonenumber %></small><br>
+  <small><%= @listing.address %></small><br>
+  <small><%= @listing.url %></small><br>
   </h1>
 </div>
-
+<%if @listing.tags%>
+<div><%= render @listing.tags %></div>
+<%end%>
 
 
 <% if @listing.user == current_user -%>
