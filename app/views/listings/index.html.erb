@@ -2,6 +2,7 @@
   <div class="link row clearfix">
     <h2>
       <%= link_to listing.title, listing %><br>
+      <%= image_tag post.image_url.to_s %>
       <small class="author">
       	Open Now<br>
       	<%= listing.area%>, <%= listing.city%><br>

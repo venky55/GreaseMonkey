@@ -10,7 +10,9 @@ gem 'devise', '~> 3.5.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
-gem 'coffee-rails', '~> 4.1.0'
+#gem 'coffee-rails', '~> 4.0.1'
+#gem 'coffee-script-source', '1.8.0'
+gem 'coffee-script-source', '1.8.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 gem 'bootstrap-sass','~> 3.2.0.2'
@@ -25,7 +27,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'acts-as-taggable-on'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-
+gem 'carrierwave'
+gem 'mini_magick'
 # Use Unicorn as the app server
 # gem 'unicorn'
 
