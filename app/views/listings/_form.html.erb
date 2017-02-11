@@ -1,60 +1,64 @@
-<%= form_for(@listing,  :html => { :multipart => true } ) do |f| %>
+<head>
+
+
+  <%= stylesheet_link_tag 'login.css.scss' %>
+
+</head>
+<body class="formbody">
+  <%= form_for(@listing,  :html => { :multipart => true } ) do |f| %>
   <% if @listing.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@listing.errors.count, "error") %> prohibited this listing from being saved:</h2>
+  <div id="error_explanation">
+    <h2><%= pluralize(@listing.errors.count, "error") %> prohibited this listing from being saved:</h2>
 
-      <ul>
+    <ul>
       <% @listing.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+      <li><%= message %></li>
       <% end %>
-      </ul>
-    </div>
+    </ul>
+  </div>
   <% end %>
+  <div class="container">
+    <div class="info">
+      <h1>New Listing</h1>
+    </div>
+  </div>
+  <div class="form_listing">
 
-  <div class="form-group">
-    <%= f.label :title %><br>
-    <%= f.text_field :title, class: "form-control" %>
-  </div>
-  <div class="form-group">
-    <%= f.label :area %><br>
-    <%= f.text_field :area, class: "form-control" %>
-  </div>
-   <div class="form-group">
-    <%= f.label :city %><br>
-    <%= f.text_field :city, class: "form-control" %>
-  </div>
-   <div class="form-group">
-    <%= f.label :workinghours %><br>
-    <%= f.text_field :workinghours, class: "form-control" %>
-  </div>
-   <div class="form-group">
-    <%= f.label :workingdays %><br>
-    <%= f.text_field :workingdays, class: "form-control" %>
-  </div>
-   <div class="form-group">
-    <%= f.label :phonenumber %><br>
-    <%= f.text_field :phonenumber, class: "form-control" %>
-  </div>
-   <div class="form-group">
-    <%= f.label :address %><br>
-    <%= f.text_field :address, class: "form-control" %>
-  </div>
+    <%= f.text_field :title, class: "input" , :placeholder => 'Title'%>
 
-  <div class="form-group">
-    <%= f.label :url %><br>
-    <%= f.text_field :url, class: "form-control" %>
-  </div>
-  <div class="form-group">
-    <%= f.label :tag_list %><br>
-    <%= f.text_field :tag_list, value: f.object.tag_list.to_s %>
-  </div>
-  <div class="form-group">
-    <%= f.label :image %>
-  <%= f.file_field :image %>
-  </div>
-  <br>
-  <div class="form-group">
-    <%= f.submit "Submit", class: "btn btn-lg btn-primary" %>
-  </div>
 
-<% end %>
+    <%= f.text_field :area, class: "input", :placeholder => 'Area' %>
+
+
+    <%= f.text_field :city, class: "input", :placeholder => 'Ciry' %>
+
+
+    <%= f.text_field :workinghours, class: "input", :placeholder => 'Working Hours' %>
+
+
+    <%= f.text_field :workingdays, class: "input", :placeholder => 'Working Days' %>
+
+
+    <%= f.text_field :phonenumber, class: "input", :placeholder =>'Phonenumber' %>
+
+    <%= f.text_field :address, class: "input", :placeholder => 'Address' %>
+
+
+    <%= f.text_field :url, class: "input", :placeholder => 'Website' %>
+
+
+    <%= f.text_field :tag_list, value: f.object.tag_list.to_s, :placeholder => 'Tags' ,class: "input"%>
+    <br>
+    <span class="btn button btn-file">
+      Choose File
+      <%= f.file_field :image %>
+    </span>
+
+
+
+    <%= f.submit "Submit", class: "button" %>
+    <br>
+
+  </form>
+  <% end %>
+</body>

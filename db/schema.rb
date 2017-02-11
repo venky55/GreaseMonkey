@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170113102307) do
+ActiveRecord::Schema.define(version: 20170115092627) do
 
   create_table "listings", force: :cascade do |t|
     t.string   "title"
@@ -54,6 +54,7 @@ ActiveRecord::Schema.define(version: 20170113102307) do
   create_table "tags", force: :cascade do |t|
     t.string  "name"
     t.integer "taggings_count", default: 0
+    t.string  "icon"
   end
 
   add_index "tags", ["name"], name: "index_tags_on_name", unique: true

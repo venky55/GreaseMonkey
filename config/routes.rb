@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   resources :listings
-  resources :tags, only: [:index, :show]
+  resources :tags
   root to: "tags#index"
   #devise_for :installs
   # The priority is based upon order of creation: first created -> highest priority.

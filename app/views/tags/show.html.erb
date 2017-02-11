@@ -1,6 +1,6 @@
 <h1><%= @tag.name %></h1>
 <% @listings.each do |listing| %>
-  <div class="link row clearfix">
+ 
     <h2>
       <%= link_to listing.title, listing %><br>
       <small class="author">
@@ -11,5 +11,5 @@
       </small>
     </h2>
 
-  </div>
+  
 <% end %>
