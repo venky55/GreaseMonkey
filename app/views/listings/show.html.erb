@@ -22,7 +22,9 @@
   <header>
    
     <div class="profile-pic-container_listing">
-      <img class="profile-pic" src="http://www.freeiconspng.com/uploads/maintenance-repair-service-support-icon--20.png" alt="" />
+    <%= image_tag @listing.image_url,:class => 'profile-pic'
+    %>
+     
      
     </div>
   </header>
