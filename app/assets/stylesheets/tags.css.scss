@@ -1,3 +1,12 @@
+$main: #252529;
+$secondary: #8b8b9f;
+$highlight:	#73e298;
+$white: #FFFFFF;
+$dark_grey: #3f3d4e;
+$grey_background: #f2f1f8;
+$grey_copy: #b9b7c6;
+$dark_grey: #3f3d4e;
+
 .container{
 	 border-top: none !important; 
 }
@@ -18,84 +27,48 @@
 /* Pin Styles */
 
 body {
-	background: url(http://subtlepatterns.com/patterns/scribble_light.png) ;
+	/*background: url(http://subtlepatterns.com/patterns/scribble_light.png) ;*/
 }
 
-#wrapper {
-	width: 90%;
-	max-width: 1100px;
-	min-width: 800px;
-	margin: 50px auto;
-}
 
-#columns {
-	-webkit-column-count: 3;
-	-webkit-column-gap: 10px;
-	-webkit-column-fill: auto;
-	-moz-column-count: 3;
-	-moz-column-gap: 10px;
-	-moz-column-fill: auto;
-	column-count: 3;
-	column-gap: 15px;
-	column-fill: auto;
-}
 
-.pin {
-	display: inline-block;
-	background: #FEFEFE;
-	border: 2px solid #FAFAFA;
-	box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);
-	margin: 0 2px 15px;
-	-webkit-column-break-inside: avoid;
-	-moz-column-break-inside: avoid;
-	column-break-inside: avoid;
-	padding: 15px;
-	padding-bottom: 5px;
-	background: -webkit-linear-gradient(45deg, #FFF, #F9F9F9);
-	opacity: 1;
+#services {
+
 	
-	-webkit-transition: all .2s ease;
-	-moz-transition: all .2s ease;
-	-o-transition: all .2s ease;
-	transition: all .2s ease;
-}
-
-.pin img {
-	max-width: 100%;
-	border-bottom: 1px solid #ccc;
-	padding-bottom: 15px;
-	margin-bottom: 5px;
-}
-
-.pin p {
-	font: 12px/18px Arial, sans-serif;
-	color: #333;
-	margin: 0;
-}
-
-@media (min-width: 960px) {
-	#columns {
-		-webkit-column-count: 2;
-		-moz-column-count: 2;
-		column-count: 2;
+	padding: 2rem 0 2rem 0;
+	position: relative;
+	.service {
+		background: $white;
+		width: 38%;
+		float: left;
+		margin: 5% 5% 0 5%;
+		padding: 3rem 2.5%;
+		text-align: center;
+		position: relative;
+		-webkit-box-shadow: 0px 0px 57px 0px rgba(4, 6, 9, 0.25);
+		-moz-box-shadow: 0px 0px 57px 0px rgba(4, 6, 9, 0.25);
+	  box-shadow: 0px 0px 57px 0px rgba(4, 6, 9, 0.25);
+	  border-radius: .35rem;
+	  h3 {
+	  	margin-top:  10px;
+	  	font-size: 2rem;
+	  	color: $dark_grey;
+	  }
+	  p {
+	  	margin: 0 0 2rem 0;
+	  	color: $dark_grey;
+	  	text-align: left;
+	  	padding-left: 20px;
+	  }
+	  .button {
+	  	padding: .5rem 2rem;
+	  }
+	  
 	}
-}
 
-@media (min-width: 1100px) {
-	#columns {
-		-webkit-column-count: 2;
-		-moz-column-count: 2;
-		column-count: 2;
+	
+	
+}
+.wrapper{
+		margin-left: 4%;
 	}
-}
-@media (max-width: 680px){
-	#columns{
-		-webkit-column-count: 1;
-		-moz-column-count: 1;
-		column-count: 1;
-	}
-}
-
-#columns:hover .pin:not(:hover) {
-	opacity: 0.4;
-}

@@ -1,3 +1,4 @@
+<!--
 <div class="page-header">
   <h1><%= @listing.title %></a><br>
   <%= image_tag @listing.image.thumb.url.to_s %><br>
@@ -11,13 +12,66 @@
   </h1>
 </div>
 <%if @listing.tags%>
-<!-- <div><%= render @listing.tags %></div> -->
+ <div><%= render @listing.tags %></div> 
 <%end%>
+-->
+<head>
+    <%= stylesheet_link_tag 'listings.css.scss' %>
+</head>
+<div class="container_listing">
+  <header>
+   
+    <div class="profile-pic-container_listing">
+      <img class="profile-pic" src="http://www.freeiconspng.com/uploads/maintenance-repair-service-support-icon--20.png" alt="" />
+     
+    </div>
+  </header>
+  <div class="main_listing">
+    <p class="description_listing_title"><strong>3M Car Care</strong></p>
+    
+    <div class="stats-container_listing">
+      <div class="stat_listing">
+        <div class="number"><strong>Hours</strong></div>
+        <div class="text">9am - 9pm</div>
+      </div>
+      <div class="stat_listing">
+        <div class="number"><strong>Days</strong></div>
+        <div class="text">Mon - Sat</div>
+      </div>
+     
+      <div class="stat_listing_last">
+        <div class="number"><strong>Phone</strong></div>
+        <div class="text">8149251493</div>
+      </div>
+      <div class="further_details">
+      <p class="description_listing">No.9, Valmiki Street,Periyar Nagar.</p>
 
+          <p class="description_listing">Adyar , Chennei </p>
+          <a href=" "><p class="description_listing">Website</p></a>
+          </div>
+    </div>
+    <%if @listing.tags%>
+    <div><%= render @listing.tags %></div> 
+    <%end%>
+  
+    <!--
+    <div class="pictures">
+      <img src="https://unsplash.it/200/200?image=1061" alt="" class="picture" />
+      <img src="https://unsplash.it/200/200?image=1045" alt="" class="picture" />
+      <img src="https://unsplash.it/200/200?image=1044" alt="" class="picture" />
+      <img src="https://unsplash.it/200/200?image=1037" alt="" class="picture" />
+      <img src="https://unsplash.it/200/200?image=1021" alt="" class="picture" />
+      <img src="https://unsplash.it/200/200?image=1003" alt="" class="picture" />
+    </div>
+    -->
+  </div>
+</div>
 
+<!--
 <% if @listing.user == current_user -%>
 	<div class="btn-group">
 		<%= link_to 'Edit', edit_listing_path(@listing), class: "btn btn-default" %>
 		<%= link_to 'Destroy', @listing, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default" %>
 	</div>
 <% end %>
+-->

@@ -1,0 +1,134 @@
+$white: #fff;
+$black: #202020;
+$grey: #808080;
+$background: #c3c8c9;
+$pink: #FF6C8B;
+$orange: #FFAC40;
+
+$default-border: 1px $background solid;
+
+// Basics
+body {
+  /*background-color: $background;*/
+  font-family: 'Roboto Condensed';
+
+}
+
+.container_listing {
+  margin: 0 auto;
+  background-color: $white;
+  max-width: 400px;
+  max-height: 650px;
+  overflow: hidden;
+  box-shadow: 0px 0px 20px $black;
+  margin-top: 1em;
+  color: $black;
+}
+
+
+
+// Header
+header {
+  background: url(https://unsplash.it/1080/720?image=601) no-repeat;
+  background-size: cover;
+  position: relative;
+  min-height: 230px;
+  margin-bottom: 40px;
+}
+
+
+.name {
+  font-size: 1.2em;
+}
+
+.profile-pic-container_listing {
+  bottom: -50px;
+  left: calc(50% - 60px);
+  position: absolute;
+  
+}
+
+
+.profile-pic {
+  max-width: 120px;
+  border-radius: 50%;
+  border: 2px solid $white;
+  box-shadow: 0 0 5px $black;
+}
+
+.main_listing{
+  padding-top: 20px;
+}
+
+.description_listing_title{
+
+  padding: 0.5em 2em;
+  text-align: center;
+  font-size: 24px;
+}
+
+.description_listing{
+
+  padding: 0.5em 1em;
+  text-align: center;
+  font-size: 18px;
+}
+.stats-container_listing{
+  padding-bottom: 0.5em;
+  border-bottom: $default-border;
+}
+
+.stat_listing{
+  display: inline-block;
+  width: 32%;
+  text-align: center;
+  border-right: $default-border;
+  
+  &:last-child{
+    border:none;
+  }
+  
+  &.active{
+    color: $orange;
+    
+    .text{
+      color: $orange;
+    }
+  }
+}
+.stat_listing_last{
+  display: inline-block;
+  width: 32%;
+  text-align: center;
+  border-right: none;
+  
+  &:last-child{
+    border:none;
+  }
+  
+  &.active{
+    color: $orange;
+    
+    .text{
+      color: $orange;
+    }
+  }
+}
+
+.text_listing{
+  color: $grey;
+  font-weight: 100;
+  font-size: 0.8em;
+  text-transform: uppercase;
+}
+
+.view-options{
+  border-bottom: $default-border;
+}
+
+
+
+.further_details{
+  margin-top: 20px;
+}
+
