@@ -2,27 +2,15 @@
 	<%= stylesheet_link_tag 'lsitings.css.scss' %>
 </head>
 <body>
-	<h1><%= @tag.name %></h1>
-<% @listings.each do |listing| %>
- 
-    <h2>
-      <%= link_to listing.title, listing %><br>
-      <small class="author">
-        Open Now<br>
-        <%= listing.area%>, <%= listing.city%><br>
-        4.7 Stars<br>
-        3.2 kms Away<br>
-      </small>
-    </h2>
 
-  
-<% end %>
- <div class="border_tags"></div>
-  <div class="wrapper">
-    <header class="main_header clearfix">
-      <div class="logo">
-        <img src="https://cdn4.iconfinder.com/data/icons/search-engine-optimization/512/engineering_tools_working_maintenance_equipment_service_flat_icon_symbol-512.png" alt="Smile">
-        <h1>Car<span> Repairs</span></h1>
+
+ <div class="border_listing"></div>
+  <div class="wrapper_listing">
+    <header class="main_header_listing clearfix">
+      <div class="logo_listing">
+        
+        
+         <h1><%= @tag.name %></h1>
       </div>
       <!--
       <nav class="nav">
@@ -34,127 +22,42 @@
       -->
     </header>
 
+ 
+
     <ul id="timeline">
+    <% @listings.each do |listing| %>
+ 
+   
+     <li class="listing clearfix">
+          <div class="image_wrapper">
+          <%= link_to listing do%>
+          <%= image_tag listing.image_url %>
+          <%end%>
+           <!--  <img src="images/twitter.jpg" alt="Business Logo"> -->
+          </div>
+          <div class="info">
+           <span class="job_title"> <%= link_to listing.title, listing %></span>
+          <span class="job_info"><%= listing.area%> <span>&bull;</span>  <%= listing.city%> <span>&bull;</span> <%= listing.phonenumber %></span>
+          </div>
+         
+        </li>
+       
+      <!--
       <a href="#">
         <li class="listing clearfix">
         <div class="image_wrapper">
-          <img src="images/dribbble.jpg" alt="Dribbble">
+          <img src="http://www.freeiconspng.com/uploads/twitter-icon-9.png" alt="Dribbble">
         </div>
         <div class="info">
           <span class="job_title">XyZ</span>
           <span class="job_info">OMR <span>&bull;</span> Chennai <span>&bull;</span> 9677227711</span>
         </div>
-        
+
       </li>
-        <li class="listing clearfix">
-          <div class="image_wrapper">
-            <img src="images/twitter.jpg" alt="Twitter">
-          </div>
-          <div class="info">
-           <span class="job_title">3M</span>
-          <span class="job_info">Adyar <span>&bull;</span> Chennai <span>&bull;</span> 9677227711</span>
-          </div>
-         
-        </li>
       </a>
+   -->
 
-      <a href="#">
-        <li class="listing clearfix">
-          <div class="image_wrapper">
-            <img src="images/product_hunt.jpg" alt="Product Hunt">
-          </div>
-          <div class="info">
-           <span class="job_title">Business Name</span>
-          <span class="job_info">Adyar <span>&bull;</span> Chennai <span>&bull;</span> 9677227711</span>
-          </div>
-          
-        </li>
-      </a>
-
-  
-
-    
-
-      <li class="listing clearfix">
-        <div class="image_wrapper">
-          <img src="images/medium.jpg" alt="Medium">
-        </div>
-        <div class="info">
-         <span class="job_title">Business Name</span>
-          <span class="job_info">Adyar <span>&bull;</span> Chennai <span>&bull;</span> 9677227711</span>
-        </div>
-       
-      </li>
-
-      <li class="listing clearfix">
-        <div class="image_wrapper">
-          <img src="images/soundcloud.jpg" alt="SoundCloud">
-        </div>
-        <div class="info">
-         <span class="job_title">Business Name</span>
-          <span class="job_info">Adyar <span>&bull;</span> Chennai <span>&bull;</span> 9677227711</span>
-        </div>
-       
-      </li>
-
-      <li class="listing clearfix">
-        <div class="image_wrapper">
-          <img src="images/twitter.jpg" alt="Twitter">
-        </div>
-        <div class="info">
-        <span class="job_title">Business Name</span>
-          <span class="job_info">Adyar <span>&bull;</span> Chennai <span>&bull;</span> 9677227711</span>
-        </div>
-     
-      </li>
-
-     
-
-      <li class="listing clearfix">
-        <div class="image_wrapper">
-          <img src="images/dribbble.jpg" alt="Dribbble">
-        </div>
-        <div class="info">
-          <span class="job_title">Senior Rails Dev</span>
-          <span class="job_info">Dribbble <span>&bull;</span> San Francisco <span>&bull;</span> March 1st</span>
-        </div>
-        
-      </li>
-
-      <li class="listing clearfix">
-        <div class="image_wrapper">
-          <img src="images/medium.jpg" alt="Medium">
-        </div>
-        <div class="info">
-          <span class="job_title">Front-End Engineer</span>
-          <span class="job_info">Medium <span>&bull;</span> San Francisco <span>&bull;</span> March 1st</span>
-        </div>
-       
-      </li>
-
-      <li class="listing clearfix">
-        <div class="image_wrapper">
-          <img src="images/soundcloud.jpg" alt="SoundCloud">
-        </div>
-        <div class="info">
-          <span class="job_title">Visual Designer</span>
-          <span class="job_info">SoundCloud <span>&bull;</span> San Francisco <span>&bull;</span> March 1st</span>
-        </div>
-      
-      </li>
-
-      <li class="listing clearfix">
-        <div class="image_wrapper">
-          <img src="images/twitter.jpg" alt="Twitter">
-        </div>
-        <div class="info">
-          <span class="job_title">UX Designer</span>
-          <span class="job_info">Twitter <span>&bull;</span> San Francisco <span>&bull;</span> March 1st</span>
-        </div>
-        
-      </li>
-
-   
+   <% end %>
 
     </ul>
 
