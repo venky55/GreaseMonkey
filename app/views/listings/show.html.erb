@@ -20,7 +20,8 @@
 </head>
 <div class="container_listing">
   <header class="show_header">
-   
+    <%= image_tag @listing.coverimage_url,:class=>'cover-pic' %>
+    
     <div class="profile-pic-container_listing">
     <%= image_tag @listing.image_url,:class => 'profile-pic'
     %>
