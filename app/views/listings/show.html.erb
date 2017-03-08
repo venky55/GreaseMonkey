@@ -53,8 +53,18 @@
           <a href=" "><p class="description_listing">Website</p></a>
           </div>
     </div>
+    <div>
+      <h5>Tagged In:</h5>
+    </div>
     <%if @listing.tags%>
-    <div><%= render @listing.tags %></div> 
+    <!--<div><%= render @listing.tags %></div> -->
+    <div class="description_listing">
+      <% @tags = @listing.tags.last(10)%>
+
+      <% @tags.each do |tag|%>
+        <%= link_to tag, tag.name%>
+      <% end %>
+    </div>
     <%end%>
   
     <!--
