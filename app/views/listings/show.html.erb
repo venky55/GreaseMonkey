@@ -58,12 +58,10 @@
     </div>
     <%if @listing.tags%>
     <!--<div><%= render @listing.tags %></div> -->
-    <div class="description_listing">
-      <% @tags = @listing.tags.last(10)%>
-
-      <% @tags.each do |tag|%>
-        <%= link_to tag, tag.name%>
-      <% end %>
+    <div class="tag_listing">
+     <% @tags.each do|tag| %>
+     <%= link_to tag, tag.name%>
+     <%end%>
     </div>
     <%end%>
   

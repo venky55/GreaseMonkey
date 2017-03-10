@@ -18,7 +18,7 @@ body {
   margin: 0 auto;
   background-color: $white;
   max-width: 400px;
-  max-height: 650px;
+  max-height: 750px;
   overflow: hidden;
   box-shadow: 0px 0px 20px $black;
   margin-top: 1em;
@@ -81,8 +81,7 @@ body {
 }
 .tag_listing{
 
-  padding: 0.5em 1em;
-  
+ display: inline-block;
   
 }
 .stats-container_listing{
