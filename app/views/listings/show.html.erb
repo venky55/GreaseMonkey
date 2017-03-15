@@ -30,27 +30,27 @@
     </div>
   </header>
   <div class="main_listing">
-    <p class="description_listing_title"><strong>3M Car Care</strong></p>
+    <p class="description_listing_title"><strong><%=@listing.title%></strong></p>
     
     <div class="stats-container_listing">
       <div class="stat_listing">
         <div class="number"><strong>Hours</strong></div>
-        <div class="text">9am - 9pm</div>
+        <div class="text"><%=@listing.workinghours%></div>
       </div>
       <div class="stat_listing">
         <div class="number"><strong>Days</strong></div>
-        <div class="text">Mon - Sat</div>
+        <div class="text"><%=@listing.workingdays%></div>
       </div>
      
       <div class="stat_listing_last">
         <div class="number"><strong>Phone</strong></div>
-        <div class="text">8149251493</div>
+        <div class="text"><%=@listing.phonenumber%></div>
       </div>
       <div class="further_details">
-      <p class="description_listing">No.9, Valmiki Street,Periyar Nagar.</p>
+      <p class="description_listing"><%=@listing.address%></p>
 
-          <p class="description_listing">Adyar , Chennei </p>
-          <a href=" "><p class="description_listing">Website</p></a>
+          <p class="description_listing"><%=@listing.area%> , <%=@listing.city%> </p>
+          <a href=" "><p class="description_listing"><%=@listing.url%></p></a>
           </div>
     </div>
     <div>
