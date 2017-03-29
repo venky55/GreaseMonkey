@@ -21,6 +21,10 @@ $dark_grey: #3f3d4e;
 	 display:block;
     margin:auto;
 }
+.tagitem div{
+	 display:block;
+    margin:auto;
+}
 .tagtitle{
 
 }
@@ -73,3 +77,13 @@ body {
 .wrapper{
 		margin-left: 4%;
 	}
+.icon{
+	margin-top: 20px;
+}
+.image-div{
+	width: 150px;
+	height: 150px;
+	border-radius: 50% ;
+	background-color: #FFC107;
+	margin: 0 auto;
+}
