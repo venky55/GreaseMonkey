@@ -44,7 +44,7 @@ body {
 	.service {
 		background: $white;
 		width: 38%;
-		height: 250px;
+		height: 50%;
 		float: left;
 		margin: 5% 5% 0 5%;
 		padding: 3rem 2.5%;
@@ -78,11 +78,12 @@ body {
 		margin-left: 4%;
 	}
 .icon{
-	margin-top: 20px;
+	margin-top: 15px;
+	
 }
 .image-div{
-	width: 150px;
-	height: 150px;
+	width: 100px;
+	height: 100px;
 	border-radius: 50% ;
 	background-color: #FFC107;
 	margin: 0 auto;
